@@ -62,6 +62,13 @@ npm test
 
 ## Cloud Agent environment
 
-This repository ships a `.cursor/environment.json` that provisions MySQL and the
-Node toolchain, installs dependencies, and runs the app so Cloud Agents get a
-working setup automatically.
+The Cloud Agent environment boots from a base snapshot that already has MySQL 8.0
+and Node.js 22 installed. On each boot:
+
+- `install`: `npm ci`
+- `start`: `scripts/start-mysql.sh` starts MySQL, waits for readiness, and
+  idempotently creates the `tableflip`/`tableflip_test` databases and app user.
+- the dev server runs `npm start` and listens on port `3000`.
+
+`scripts/start-mysql.sh` and `scripts/init-db.sh` are safe to run locally too if
+you want to reproduce the same startup on your own machine.
