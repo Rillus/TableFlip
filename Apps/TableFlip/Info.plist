@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>TableFlip</string>
+	<key>CFBundleDisplayName</key>
+	<string>TableFlip</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.tableflip.app</string>
+	<key>CFBundleVersion</key>
+	<string>0.1.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.1.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.0</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Free and open source under the MIT Licence. No account required.</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>SQLite Database</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Alternate</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.database</string>
+				<string>public.data</string>
+			</array>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>sqlite</string>
+				<string>sqlite3</string>
+				<string>db</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSSupportsAutomaticTermination</key>
+	<true/>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
