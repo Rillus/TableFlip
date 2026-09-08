@@ -1,0 +1,17 @@
+{
+  "name": "TableFlip",
+  "user": "ubuntu",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "install": "npm ci",
+  "start": "bash scripts/start-mysql.sh",
+  "terminals": [
+    {
+      "name": "server",
+      "command": "npm start"
+    }
+  ],
+  "ports": [3000]
+}
