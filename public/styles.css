@@ -1,0 +1,179 @@
+:root {
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --accent: #38bdf8;
+  --available: #22c55e;
+  --occupied: #f97316;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+header {
+  padding: 2rem 1.5rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header .flip {
+  display: block;
+  font-size: 1rem;
+  color: var(--accent);
+  margin-top: 0.25rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0.25rem 0 0;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-end;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: var(--muted);
+  gap: 0.25rem;
+}
+
+input {
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0b1220;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #04283a;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+li.table {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  background: #0b1220;
+  border: 1px solid #334155;
+}
+
+.table-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-name {
+  font-weight: 600;
+}
+
+.table-seats {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.badge {
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badge.available {
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--available);
+}
+
+.badge.occupied {
+  background: rgba(249, 115, 22, 0.15);
+  color: var(--occupied);
+}
+
+.actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.actions button {
+  background: #334155;
+  color: var(--text);
+  font-size: 0.8rem;
+  padding: 0.4rem 0.7rem;
+}
+
+.actions button.flip {
+  background: var(--accent);
+  color: #04283a;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.error {
+  color: #f87171;
+  min-height: 1.2rem;
+  margin: 0.5rem 0 0;
+}

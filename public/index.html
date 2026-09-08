@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TableFlip</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>TableFlip <span class="flip" aria-hidden="true">(&#9583;&#176;&#9633;&#176;)&#9583;&#65077; &#9531;&#9473;&#9531;</span></h1>
+      <p class="subtitle">A tiny MySQL-backed restaurant table manager.</p>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>Add a table</h2>
+        <form id="add-form" autocomplete="off">
+          <label>
+            Name
+            <input id="name" name="name" type="text" placeholder="Window 1" required />
+          </label>
+          <label>
+            Seats
+            <input id="seats" name="seats" type="number" min="1" value="2" />
+          </label>
+          <button type="submit">Add table</button>
+        </form>
+        <p id="form-error" class="error" role="alert"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Tables</h2>
+        <p id="empty" class="muted">No tables yet. Add one above.</p>
+        <ul id="tables"></ul>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
